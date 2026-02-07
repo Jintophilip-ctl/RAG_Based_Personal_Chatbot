@@ -210,7 +210,7 @@ Remember: Mark's mother Helen is visiting next weekend
 
 ---
 
-## 🛣️ Other Future Improvements
+## 🛣️ Future Improvements
 
 ### 🔊 Voice-Based Personal Assistant (Next Level)
 
@@ -256,7 +256,7 @@ A fully local, privacy-first **personal assistant speaker** — no cloud, no tra
 
 ---
 
-## 🛣️ Future Improvements
+## 🛣️ More Future Improvements
 
 * Auto-reindex with file locks
 * Multi-user sessions
