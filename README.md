@@ -154,6 +154,11 @@ scripts/rag_engine_with_history.py
 * **ConversationalRetrievalChain** – handles Q&A + memory
 
 ---
+## Start phi before App
+
+```bash
+ ollama run phi    
+```
 
 ## 🌐 Run the Web App
 
