@@ -1,4 +1,4 @@
-#!/data01/rag-chatbot/rag-env/bin/python3
+#!/rag-chatbot/rag-env/bin/python3
 import gc
 import hashlib
 import os
@@ -18,9 +18,9 @@ from langchain_community.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-PERSIST_DIR = "/data01/rag-chatbot/chroma_db"
-HASH_FILE =  "/data01/rag-chatbot/docs/data.hash"
-DOC_PATH = "/data01/rag-chatbot/docs/family.txt"
+PERSIST_DIR = "/rag-chatbot/chroma_db"
+HASH_FILE =  "/rag-chatbot/docs/data.hash"
+DOC_PATH = "/rag-chatbot/docs/family.txt"
 qa_chain = None  
 
 
@@ -174,7 +174,7 @@ Answer:
   #  return qa_chain
 
 
-def append_memory(text, path="/data01/rag-chatbot/docs/family.txt"):
+def append_memory(text, path="/rag-chatbot/docs/family.txt"):
     with open(path, "a", encoding="utf-8") as f:
         f.write("\n" + text.strip() + "\n")
 
