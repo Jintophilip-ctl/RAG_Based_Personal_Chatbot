@@ -210,7 +210,7 @@ Remember: Mark's mother Helen is visiting next weekend
 
 ---
 
-## 🛣️ Future Improvements
+## 🛣️ Other Future Improvements
 
 ### 🔊 Voice-Based Personal Assistant (Next Level)
 
