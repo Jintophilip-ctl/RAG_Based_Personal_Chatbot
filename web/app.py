@@ -1,4 +1,4 @@
-#!/data01/rag-chatbot/rag-env/bin/python3 
+#!/rag-chatbot/rag-env/bin/python3 
 import sys 
 import shutil
 import stat
@@ -6,13 +6,13 @@ import os
 
 from flask import Flask, render_template, request, session
 
-sys.path.append('/data01/rag-chatbot/scripts') 
+sys.path.append('/rag-chatbot/scripts') 
 from rag_engine_with_history import build_qa_chain, append_memory
 
-FAMILY_FILE = "/data01/rag-chatbot/docs/family.txt"
-PERSIST_DIR = "/data01/rag-chatbot/chroma_db"
+FAMILY_FILE = "/rag-chatbot/docs/family.txt"
+PERSIST_DIR = "/rag-chatbot/chroma_db"
 
-app = Flask(__name__, template_folder= "/data01/rag-chatbot/web/templates")
+app = Flask(__name__, template_folder= "/rag-chatbot/web/templates")
 
 app.secret_key = "family-assistant-secret"  # required for session
 
