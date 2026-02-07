@@ -303,3 +303,9 @@ You now have:
 * Full control over data
 
 🚀 Well done — this is real applied AI engineering.
+
+
+## 📄 License
+
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
