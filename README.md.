@@ -12,6 +12,17 @@ It acts as a **fictional family personal assistant**, answering questions about 
 > This project is for **learning and demonstration purposes only**.
 
 ---
+## 📸 Screenshots
+
+### Main Interface
+![Main UI](screenshots/ui-home.png)
+
+### Question & Answer Example
+![Q&A Example](screenshots/qa-example.png)
+
+### Remember Command
+![Remember Command](screenshots/remember-command.png)
+
 
 ## ✨ Features
 
