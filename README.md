@@ -199,6 +199,25 @@ Remember: Mark's mother Helen is visiting next weekend
 
 ---
 
+## Troubleshooting
+
+### Model Hallucinations or Inaccurate Responses
+
+If the system starts producing inaccurate or hallucinated responses, it may be due to outdated or inconsistent vector embeddings.
+
+To recover:
+
+1. **Stop the application**
+2. **Update the source data**
+   - Edit or correct the contents of `family.txt`
+3. **Rebuild the vector database**
+   ```bash
+      rm -rf /rag-chatbot/chroma_db
+   ```
+4. Restart the application to allow embeddings to be regenerated from the updated data.
+
+This process ensures the vector store remains consistent with the latest source documents.
+
 ## 🔐 Security Notes
 
 * Uses `app.secret_key` for Flask session security
