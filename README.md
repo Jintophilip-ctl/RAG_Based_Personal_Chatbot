@@ -154,7 +154,7 @@ scripts/rag_engine_with_history.py
 * **ConversationalRetrievalChain** – handles Q&A + memory
 
 ---
-## Start phi before App
+## 🧠 Start phi before App
 
 ```bash
  ollama run phi    
@@ -199,9 +199,9 @@ Remember: Mark's mother Helen is visiting next weekend
 
 ---
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
-### Model Hallucinations or Inaccurate Responses
+### 🌀 Model Hallucinations or Inaccurate Responses
 
 If the system starts producing inaccurate or hallucinated responses, it may be due to outdated or inconsistent vector embeddings.
 
