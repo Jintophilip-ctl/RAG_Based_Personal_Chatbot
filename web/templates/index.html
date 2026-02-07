@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local RAG Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+        .chatbox {
+            background: white;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 8px;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+        .answer {
+            margin-top: 20px;
+            background: #eef;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="chatbox">
+    <h2 style="text-align:center">🧠 Personal Chatbot</h2>
+    <h3 style="text-align:center">(Family Assistant)</h3>
+    <form method="POST">
+        {% if chat %}
+            {% for item in chat %}
+             <div class="answer">
+                <strong>You:</strong>
+                <p>{{ item.question }}</p>
+                <strong>Bot:</strong>
+                <p>{{ item.answer }}</p>
+             </div>
+             {% endfor %}
+        {% endif %}
+        <textarea name="question" placeholder="Ask about your family..."></textarea>
+        <br>
+        <button type="submit">Ask</button>  
+    </form>
+</div>
+</body>
+</html>

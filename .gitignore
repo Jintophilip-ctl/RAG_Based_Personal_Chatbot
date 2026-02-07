@@ -1,0 +1,25 @@
+# Python virtual environment
+rag-env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Chroma / vector DB
+chroma_db/
+
+# Local data files
+docs/data.txt
+docs/*.hash
+#sctipts 
+scripts/rag_engine_with_history copy.py
+scripts/rag_engine.py
+
+# OS / editor junk
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
