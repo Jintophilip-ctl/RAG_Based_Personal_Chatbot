@@ -1,8 +1,8 @@
-# 🧠 Personal Chatbot (Family Assistant)
+# 🧠 SahAI – Your Personal Family Assistant
 
 This project demonstrates a practical, end-to-end implementation of a local RAG-based assistant.
 
-A **local, private Retrieval-Augmented Generation (RAG) chatbot** built using **Ollama**, **LangChain**, **ChromaDB**, and **Flask**.
+A **100% local, private Retrieval-Augmented Generation (RAG) chatbot** built using **Ollama**, **LangChain**, **ChromaDB**, and **Flask**.
 It acts as a **fictional family personal assistant**, answering questions about family members, appointments, routines, and activities — all **offline** and under your control.
 
 
@@ -15,7 +15,7 @@ It acts as a **fictional family personal assistant**, answering questions about 
 ## 📸 Screenshots
 
 ### Main Interface
-![Main UI](screenshots/ui-home.png)
+![main UI](screenshots/ui-home.png)
 
 ### Question & Answer Example
 ![Q&A Example](screenshots/qa-example.png)
