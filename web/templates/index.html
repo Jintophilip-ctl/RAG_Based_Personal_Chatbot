@@ -25,7 +25,7 @@
         }
         .answer {
             margin-top: 20px;
-            background: #eef;
+            background: #b9edf7;
             padding: 15px;
             border-radius: 5px;
         }
@@ -33,23 +33,73 @@
 </head>
 <body>
 <div class="chatbox">
-    <h2 style="text-align:center">🧠 Personal Chatbot</h2>
-    <h3 style="text-align:center">(Family Assistant)</h3>
+    <h2 style="text-align:center">🧠 SahAI – Your Personal Family Assistant</h2>
     <form method="POST">
         {% if chat %}
             {% for item in chat %}
              <div class="answer">
                 <strong>You:</strong>
                 <p>{{ item.question }}</p>
-                <strong>Bot:</strong>
+                <strong>SahAI:</strong>
                 <p>{{ item.answer }}</p>
              </div>
              {% endfor %}
+              {% set last_answer = chat[-1].answer %}
         {% endif %}
         <textarea name="question" placeholder="Ask about your family..."></textarea>
         <br>
         <button type="submit">Ask</button>  
+        
     </form>
 </div>
 </body>
+<script>
+    
+let lastResponse = {{ last_answer | default('') | tojson }};
+
+
+function speakText(text) {
+    if (!text) return;
+
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-GB";
+    speech.rate = 1;
+    speech.pitch = 1;
+
+    function loadVoicesAndSpeak() {
+        const voices = speechSynthesis.getVoices();
+
+        // Common female UK voices (depends on OS/browser)
+        const preferredVoices = [
+            "Google UK English Female",
+            "Microsoft Sonia Online (Natural) - English (United Kingdom)",
+            "Samantha"
+        ];
+
+        const selectedVoice = voices.find(v =>
+            preferredVoices.includes(v.name)
+        );
+
+        if (selectedVoice) {
+            speech.voice = selectedVoice;
+        }
+
+        speechSynthesis.speak(speech);
+    }
+
+    // Handle async loading
+    if (speechSynthesis.getVoices().length === 0) {
+        speechSynthesis.onvoiceschanged = loadVoicesAndSpeak;
+    } else {
+        loadVoicesAndSpeak();
+    }
+}
+// 🚀 Auto speak when page loads
+window.onload = function() {
+    if (lastResponse) {
+        speakText(lastResponse);
+    }
+}
+</script>
+
 </html>
